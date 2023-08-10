@@ -47,6 +47,44 @@ img {
   max-width: 100%;
 }
 
+.popup {
+    position: fixed;
+    top: 19%;
+    left: 3%;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid #444;
+    padding: 50px;
+    z-index: 9999;
+    border-radius: 5px;
+}
+
+
+
+
+.popup .popTxt p {
+    font-size: 16px;
+    line-height: 35px;
+}
+
+
+
+.popup form {
+    margin-top: 35px;
+    font-size: 14px;
+    width: 100%;
+    background: rgba(254,172,95,0.5);
+    border-radius: 5px;
+    color: #444;
+}
+
+
+
+
+
+
+
+
+
 
 
 /* 네비게이션 메뉴 */
@@ -1302,93 +1340,6 @@ footer {
 
 
 
-@media (max-width:1024px) {
-  .fix_motion .fix_wrap {
-    height: 3000px;
-  }
-
-  /* //모바일버전에서 스크롤거리설정 */
-  .fix_motion .fix_wrap .tit {
-    font-size: 54px;
-    margin: auto;
-  }
-
-  .fix_motion .fix_wrap .text_box {
-    float: none;
-    position: sticky;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding-top: 100px;
-  }
-
-  .fix_motion .fix_wrap .text_box p {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    max-width: 100%;
-    padding: 0 20px;
-    font-size: 18px;
-    text-align: center;
-    box-sizing: border-box;
-    opacity: 0;
-  }
-
-  .fix_motion .fix_wrap .text_box p.active {
-    opacity: 1
-  }
-
-  .fix_motion .fix_wrap .text_box p.text02 {
-    margin-top: 0px;
-  }
-
-  .fix_motion .fix_wrap .text_box p.text03 {
-    margin-top: 0px;
-  }
-
-  .fix_motion .fix_wrap .text_box p.text04 {
-    margin-top: 0px;
-    margin-bottom: 0;
-  }
-
-  .fix_motion .fix_wrap .device_box {
-    top: calc(100vh - 360px);
-    width: 100%;
-    margin-top: 100px;
-  }
-
-  .fix_motion .fix_wrap .device_box .watch_img {
-    width: 160px;
-    height: 272px;
-  }
-
-  .fix_motion .fix_wrap .device_box .watch_img .slide_wrap {
-    width: 120px;
-    top: 66px;
-    height: 146px;
-  }
-
-  .fix_motion .fix_wrap .device_box .watch_img .slide_wrap .slide {
-    width: 480px;
-  }
-
-  .fix_motion .fix_wrap .device_box .watch_img .slide_wrap .slide figure {
-    width: 120px
-  }
-
-
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1706,8 +1657,45 @@ footer {
 } */
 
 
+.wrap .fix_motion .fix_wrap{height: 3000px;}/* //모바일버전에서 스크롤거리설정 */
+.wrap .fix_motion .fix_wrap .tit{font-size: 54px; margin:auto;}
+.wrap .fix_motion .fix_wrap .text_box {
+    float: none;
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 100px;
+}
+.wrap .fix_motion .fix_wrap .text_box p{
+    position: absolute;
+    left: 0; top: 100px;
+    width: 100%; max-width:100%;
+    padding: 0 20px;
+    font-size: 18px;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 0;
+}
+.wrap .fix_motion .fix_wrap .text_box p.active{opacity:1}
+.wrap .fix_motion .fix_wrap .text_box p.text02 {margin-top: 0px;}
+.wrap.fix_motion .fix_wrap .text_box p.text03 {margin-top: 0px;}
+.wrap.fix_motion .fix_wrap .text_box p.text04 {margin-top: 0px;
+margin-bottom: 0;}
 
-
+.wrap .fix_motion .fix_wrap .device_box{
+    top: calc(100vh - 360px); width: 100%; margin-top: 100px;}
+.wrap .fix_motion .fix_wrap .device_box .watch_img {
+    width: 160px; height: 272px;}
+.wrap .fix_motion .fix_wrap .device_box .watch_img .slide_wrap{
+    width: 120px; top: 66px; height: 146px;
+}
+.wrap .fix_motion .fix_wrap .device_box .watch_img .slide_wrap .slide{
+    width: 480px;
+}
+.wrap .fix_motion .fix_wrap .device_box .watch_img .slide_wrap .slide figure{
+    width:120px
+}
 
 
 }

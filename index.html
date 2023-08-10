@@ -23,6 +23,27 @@
 </head>
 
 <body>
+
+  <div class="popup">
+    <div class="popTxt">
+        <p>
+            방문해주셔서 감사합니다. <br>
+            본 포트폴리오는 반응형이아닌 <br>
+            <strong>크롬</strong>브라우저의 <strong>"1920 x 1080"</strong>해상도 에 <br>
+            최적화된 사이즈입니다.
+        </p>
+    </div><!-- //popTxt -->
+    <form>
+        <input type="checkbox" name="close" class="btn_close" id="check">
+        <label for="check" class="btn_check"></label>
+        오늘하루보이지않기
+        <span class="close">
+          <a href="#" class="Close" onclick="closePopup()">닫기</a>
+        </span>
+    </form>
+</div><!-- //popup -->
+
+
   <header>
     <input type="checkbox" id="drawer-toggle" name="drawer-toggle" />
     <label for="drawer-toggle" id="drawer-toggle-label"></label>
@@ -54,7 +75,7 @@
 
 
   <div id="page-content">
-
+  
     <div class="video_1">
       <div class="video">
         <video autoplay muted loop src="gongyoo.mp4"></video>
@@ -862,15 +883,16 @@
               <img src="img/F_1_1.png" alt="1">
             </p>
             <p class="text02">
-              <img src="img/F_2_1.png" alt="1">
+              <img src="img/F_2_1.png" alt="2">
             </p>
             <p class="text03">
-              <img src="img/F_3_1.png" alt="1">
+              <img src="img/F_3_1.png" alt="3">
             </p>
             <p class="text04">
-              <img src="img/F_4_1.png" alt="1">
+              <img src="img/F_4_1.png" alt="4">
             </p>
           </div><!-- //text_box -->
+
           <div class="device_box">
             <div class="watch_img">
               <figure class="img_device">
@@ -993,7 +1015,14 @@
 
 
 
-
+  <script>
+    function closePopup() {
+      var popup = document.querySelector('.popup');
+  if (popup) {
+      popup.remove(); // 팝업 요소를 제거
+  }
+    }
+    </script>
 
 
 

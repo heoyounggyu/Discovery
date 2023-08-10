@@ -230,3 +230,78 @@ function w3RemoveClass(element,name){
 
 
 })();
+
+
+
+
+//팝업창
+var getCookie = function (cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1);
+      if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+  }
+  return "";
+}
+
+// 24시간 기준 쿠키 설정하기  
+var setCookie = function (cname, cvalue, exdays) {
+  var todayDate = new Date();
+  todayDate.setTime(todayDate.getTime() + (exdays*24*60*60*1000));    
+  var expires = "expires=" + todayDate.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+var couponClose = function(){
+  if($("input[id='check']").is(":checked") == true){
+      setCookie("close","Y",1);   //기간( ex. 1은 하루, 7은 일주일)
+  }
+  $(".popup").hide();
+}
+
+$(document).ready(function(){
+  cookiedata = document.cookie;
+  console.log(cookiedata);
+  if(cookiedata.indexOf("close=Y")<0){
+      $(".popup").show();
+  }else{
+      $(".popup").hide();
+  }
+  $(".close").click(function(){
+      couponClose();
+  });
+});
+
+
+let currentCookie=document.cookie;
+
+let cookieCheck=currentCookie.indexOf('green');
+
+console.log(cookieCheck)
+
+
+if(cookieCheck>-1){
+    document.querySelector('.popup').Style.display="none";
+
+}else{
+
+    document.querySelector('.popup').Style.display="block";
+}
+
+
+
+document.querySelector('.btn_check')/addEventListener('click',()=>{
+    let date=new Date();
+    date.setDate(date.getDate()+7);
+    let setCookie = "CookieName=green;";
+        setCookie += "expires="+ date.toUTCString();
+    
+    document.cookie=setCookie;
+})
+
+document.querySelector('.Close').addEventListener('.click',function(){
+    this.parentElement.style.display="none";
+})
+
